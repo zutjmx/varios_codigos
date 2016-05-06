@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+  <head>
+    <script>
+      function palindrome(str) {
+        // Good luck!
+        var cadenaAux = str.replace(/[., ]/gi,"");
+        //cadenaAux = str.replace(/[(/)\]/gi,")\(/");
+        //0_0 (: /-\ :) 0-0
+        
+        cadenaAux = cadenaAux.toLowerCase();
+        
+        var palabraInvertida = cadenaAux.split("").reverse().join("");
+        
+        if (cadenaAux == palabraInvertida) {
+          alert("La palabra SI es cap i cua");
+          return(true);
+        }
+        else {
+          alert("La palabra NO es cap i cua: " + palabraInvertida);
+          return(false);
+        } 
+        
+        //return true;
+      }
+    </script>  
+  	<meta charset="utf-8">
+    <title>Tu alucinante página web creada el vie., 6 de may. de 2016 19:21</title>
+  </head>
+  <body>
+    <p>Haz algo increíble con la web</p>
+	<input type="text" placeholder="Introducir palabra." id="input-word" />
+	<input type="button" onclick="palindrome(document.getElementById('input-word').value)" value="Comprobar"/>   
+  </body>
+</html>
